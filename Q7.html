@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<script>
+    function search(str,word) {
+         
+var x = 0, y=0;
+   
+   for (var i=0;i< str.length;i++)
+       {
+       if(str[i] == word[0])
+           {
+           for(var j=i;j< i+word.length;j++)
+              {
+               if(str[j]==word[j-i])
+                 {
+                   y++;
+                 }
+               if (y==word.length){
+                   x++;
+               }
+           }
+           y=0;
+       }
+    }
+   return "'"+word+"' was found "+x+" times.";
+}
+       document.write(search("I am not around","am"));
+</script>
+</body>
+</html>

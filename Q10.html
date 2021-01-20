@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<script>
+   
+function cs(str){
+
+var wr=[];
+    for (var i=0; i<str.length; i++) {
+  if (str[i] == str[i].toLowerCase()) {
+      wr[i] = str[i].toUpperCase();
+  }
+  else {
+    wr[i] = str[i].toLowerCase();
+  }
+}
+alert(wr.join(""));
+}
+cs("hElLO");
+</script>
+</body>
+</html>

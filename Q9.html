@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<script>
+    function cToF(t) 
+{
+  var cT = t;
+  var cF = cT * 9 / 5 + 32;
+  return cT+'\xB0C is ' + cF + ' \xB0F.';
+    
+}
+
+function fToC(f) 
+{
+  var fT = f;
+  var fC = (fT - 32) * 5 / 9;
+  return fT+'\xB0F is ' + fC + '\xB0C.';
+     
+} 
+       document.write(cToF(50));
+       document.write(fToC(100));
+</script>
+</body>
+</html>
