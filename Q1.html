@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<script>
+    
+    function sort(n1,n2,n3){
+    if(n1>n2 && n1>n3)
+    {
+        if(n2>n3)
+        {
+            alert(n1+" "+n2+" "+n3);
+        }
+        else
+        {
+            alert(n1+" "+n3+" "+n2);
+        }
+    }
+    else if(n2>n3){
+        if(n3>n1){
+       alert(n2+" "+n3+" "+n1);
+        }
+        else{
+            alert(n2+" "+n1+" "+n3);
+        }
+           }
+
+    else {
+        if(n1>n2){
+            alert(n3+" "+n1+" "+n2);
+           }
+        else
+        {
+           alert(n3+" "+n2+" "+n1);
+        }
+    }
+}
+sort(-1,0,4);
+</script>
+</body>
+</html>
