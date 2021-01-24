@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Digital clock</h2>
+
+<div id="twelveHrs"></div>
+<div id="twentyFourHrs"></div>
+<br/>
+<button type="radio" onclick="displayTwelveHrs()">12 Hour Format</button>
+<button type="radio" onclick="displayTwentyFourHrs()">24 Hour Format</button>
+<script>
+window.onload = function() {
+ var h, m, s;
+ document.getElementById('twelveHrs').style.display = 'none';
+ document.getElementById('twentyFourHrs').style.display = 'none';
+ getTwelveHrs();
+ getTwentyFourHrs();
+
+ function getTwelveHrs() {
+  var tag = 'AM';
+  checkTime();
+  if(h > 12) {
+   h -= 12
+   tag = 'PM';
+  }
+  document.getElementById('twelveHrs').innerHTML = h + ':' + m + ':' + s + ' ' + tag;
+  t = setTimeout(function() {
+   getTwelveHrs()
+  }, 1000);
+ }
+
+ function getTwentyFourHrs() {
+  checkTime();
+  document.getElementById('twentyFourHrs').innerHTML = h + ':' + m + ':' + s;
+  var t = setTimeout(function() {
+   getTwentyFourHrs()
+  }, 1000);
+ }
+
+ function checkTime() {
+  var today = new Date();
+  h = today.getHours();
+  m = today.getMinutes();
+  s = today.getSeconds();
+  if(h < 10)
+   h = '0' + h;
+  if(m < 10)
+   m = '0' + m;
+  if(s < 10)
+   s = '0' + s;
+  return h, m, s;
+ }
+}
+
+function displayTwelveHrs() {
+ document.getElementById('twentyFourHrs').style.display = 'none';
+ document.getElementById('twelveHrs').style.display = '';
+}
+
+function displayTwentyFourHrs() {
+ document.getElementById('twelveHrs').style.display = 'none';
+ document.getElementById('twentyFourHrs').style.display = '';
+}
+</script>
+</body>
+</html> 
