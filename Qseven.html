@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <form id = "myForm">
+         <select id = "selectNow">
+            <option>Option</option>
+            <option>Two</option>
+           </select>
+         <input type = "button" onclick = "remove()" value = "Click to Remove">
+      </form>
+      <p>Select and click the button to remove the selected option.</p>
+      
+      <script>
+         function remove() {
+            var x = document.getElementById("selectNow");
+            x.remove(x.selectedIndex);
+         }
+      </script>
+      
+   </body>
+</html>
