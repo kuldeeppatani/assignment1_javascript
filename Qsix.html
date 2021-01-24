@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title></title>
+</head>
+<body>
+
+<script>
+
+function getUnique(arr){
+    
+    let uniqueArr = [];
+    
+    // loop through array
+    for(let i of arr) {
+        if(uniqueArr.indexOf(i) === -1) {
+            uniqueArr.push(i);
+        }
+    }
+    document.write(uniqueArr);
+}
+
+const array = [1, 2, 3, 2, 3];
+
+getUnique(array);
+</script>
+</body>
+</html>
